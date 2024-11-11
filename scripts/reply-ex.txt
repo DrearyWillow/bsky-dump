@@ -1,0 +1,38 @@
+
+
+
+'replies': [
+    
+    {'$type': 'app.bsky.feed.defs#threadViewPost', 
+    'post': {
+        'uri': 'at://did:plc:ia76kvnndjutgedggx2ibrem/app.bsky.feed.post/3l4omu25oismj', 
+        'cid': 'bafyreie6k3wjd57tbe2pgs7pfi3bazl7qbnlbenw34z7ics4babuq3gnpy', 
+        'author': {
+            'did': 'did:plc:ia76kvnndjutgedggx2ibrem', 
+            'handle': 'mary.my.id', 
+            'displayName': 'mary🐇', 
+            'avatar': 'https://cdn.bsky.app/img/avatar/plain/did:plc:ia76kvnndjutgedggx2ibrem/bafkreiesgyo7ukzqhs5mmtulvovzrbbru7ztvopwdwfsvllu553qgfmxd4@jpeg', 
+            'associated': {
+                'chat': {'allowIncoming': 'all'}}, 
+                'labels': [], 
+                'createdAt': '2023-10-14T22:32:58.570Z'},
+        'record': {
+            '$type': 'app.bsky.feed.post',
+            'createdAt': '2024-09-21T17:44:10.000Z',
+            'facets': [],
+            'langs': ['en'], 
+            'reply': {
+                'parent': {
+                    'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 
+                    'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'},
+                'root': {
+                    'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm',
+                    'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}},
+            'text': 'post cat vid'},
+        'replyCount': 1, 'repostCount': 0, 'likeCount': 5, 'quoteCount': 0, 'indexedAt': '2024-09-21T17:44:10.000Z', 'labels': []
+        }
+    }
+
+
+
+, {'$type': 'app.bsky.feed.defs#threadViewPost', 'post': {'uri': 'at://did:plc:ebyxa6h3ck2ov7u474zqses7/app.bsky.feed.post/3l4ouhkar4q2t', 'cid': 'bafyreich6yjhurk334hvi4qstth2cet6a2r4rktpvfgwdegc5ok7sibl4a', 'author': {'did': 'did:plc:ebyxa6h3ck2ov7u474zqses7', 'handle': 'outoftouch.bsky.social', 'displayName': 'OutOfTouch 🇲🇽💙💜💖', 'avatar': 'https://cdn.bsky.app/img/avatar/plain/did:plc:ebyxa6h3ck2ov7u474zqses7/bafkreicmqtwhvhf3hk232f2k3wynelq7l7gifyxkvxugov6wc7cx45b4lq@jpeg', 'associated': {'chat': {'allowIncoming': 'all'}}, 'labels': [], 'createdAt': '2024-02-23T08:30:59.317Z'}, 'record': {'$type': 'app.bsky.feed.post', 'createdAt': '2024-09-21T20:00:20.829Z', 'langs': ['en'], 'reply': {'parent': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}, 'root': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}}, 'text': 'Cute dress and nice cat 🐈\u200d⬛'}, 'replyCount': 1, 'repostCount': 0, 'likeCount': 1, 'quoteCount': 0, 'indexedAt': '2024-09-21T20:00:20.829Z', 'labels': []}}, {'$type': 'app.bsky.feed.defs#threadViewPost', 'post': {'uri': 'at://did:plc:dre4efflq4xsbmhpzlssbjmb/app.bsky.feed.post/3l4onscil3524', 'cid': 'bafyreictejfys7uprrki22qoeyu33uykjclvrfuudpiy6xdanalthr3rpq', 'author': {'did': 'did:plc:dre4efflq4xsbmhpzlssbjmb', 'handle': 'nanners.bsky.social', 'displayName': 'anna 🇦🇷☕', 'avatar': 'https://cdn.bsky.app/img/avatar/plain/did:plc:dre4efflq4xsbmhpzlssbjmb/bafkreientkekebi6ygq7fkhatd5taghbrcyf5hce7yph2kpr3hvy2bcu3y@jpeg', 'associated': {'chat': {'allowIncoming': 'all'}}, 'labels': [], 'createdAt': '2023-07-04T21:47:25.094Z'}, 'record': {'$type': 'app.bsky.feed.post', 'createdAt': '2024-09-21T18:07:10.757Z', 'langs': ['en'], 'reply': {'parent': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}, 'root': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}}, 'text': 'HOLA'}, 'replyCount': 1, 'repostCount': 0, 'likeCount': 1, 'quoteCount': 0, 'indexedAt': '2024-09-21T18:01:05.809Z', 'labels': []}}, {'$type': 'app.bsky.feed.defs#threadViewPost', 'post': {'uri': 'at://did:plc:b3pn34agqqchkaf75v7h43dk/app.bsky.feed.post/3l4on4gin4h2t', 'cid': 'bafyreicqv6aqs54v6mzcqv5dvxuokex7fwyjflgtvnqmauybbyuxb56lzy', 'author': {'did': 'did:plc:b3pn34agqqchkaf75v7h43dk', 'handle': 'bsky.mom', 'displayName': 'джульет', 'avatar': 'https://cdn.bsky.app/img/avatar/plain/did:plc:b3pn34agqqchkaf75v7h43dk/bafkreig342blric7zzw3ov6f2g3efvv56nlaw5inb4m2pgtolqhjgqzsui@jpeg', 'associated': {'chat': {'allowIncoming': 'all'}}, 'labels': [], 'createdAt': '2024-04-22T01:44:52.791Z'}, 'record': {'$type': 'app.bsky.feed.post', 'createdAt': '2024-09-21T17:48:51.102Z', 'langs': ['en'], 'reply': {'parent': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}, 'root': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}}, 'text': 'wow ur back'}, 'replyCount': 1, 'repostCount': 0, 'likeCount': 0, 'quoteCount': 0, 'indexedAt': '2024-09-21T17:48:51.102Z', 'labels': []}}, {'$type': 'app.bsky.feed.defs#threadViewPost', 'post': {'uri': 'at://did:plc:3mo2cycrf7ideug4avnujvug/app.bsky.feed.post/3l4oz5poozg2c', 'cid': 'bafyreif747roy35ly6j6ppmnfskci7vnyxuzuf74vgziuwvl6zxhmccm2a', 'author': {'did': 'did:plc:3mo2cycrf7ideug4avnujvug', 'handle': 'blckpanther.bsky.social', 'displayName': 'BlckPanther', 'avatar': 'https://cdn.bsky.app/img/avatar/plain/did:plc:3mo2cycrf7ideug4avnujvug/bafkreib6cgfw2f5gltr7n46aanw5yg4cx5peg6q2eh7ujf7fets2cnfsiy@jpeg', 'associated': {'chat': {'allowIncoming': 'following'}}, 'labels': [], 'createdAt': '2023-09-28T00:52:23.132Z'}, 'record': {'$type': 'app.bsky.feed.post', 'createdAt': '2024-09-21T21:24:21.325Z', 'langs': ['en'], 'reply': {'parent': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}, 'root': {'cid': 'bafyreidgzsr7qidsfk7orw25f242bx4zk4itfqrmu7s5d7qjsojcm54iwm', 'uri': 'at://did:plc:pzdr5ylumf7vmvwasrpr5bf2/app.bsky.feed.post/3l4omssdl632g'}}, 'text': 'Which kitty is that? And yeah you look awesome!'}, 'replyCount': 0, 'repostCount': 0, 'likeCount': 0, 'quoteCount': 0, 'indexedAt': '2024-09-21T21:24:19.817Z', 'labels': []}}]

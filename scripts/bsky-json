@@ -1,51 +1,85 @@
 #!/usr/bin/env python
 
-from bsky_utils import get_post_thread, validate_path, save_json, print_json, url_basename
+import requests
+import subprocess
 import sys
+import json
 from pathlib import Path
-import argparse
+import re
+from datetime import datetime
 
-def input_validation():
-    config = {
-        'default_dir': '',
-        'always_replies': False,
-        'always_print': False,
-        'always_silent': True,
-    }
+config = {
+    'default_dir': '',
+    'always_replies': False,
+    'always_print': False,
+}
 
-    parser = argparse.ArgumentParser(description="Extract JSON from Bluesky posts.")
-    
-    parser.add_argument("url", help="The URL to process.")
-    parser.add_argument("path", nargs="?", default=None, help="Path for output, defaults to config setting or current directory.")
-    parser.add_argument("--replies", action="store_true", help="Include replies and parents.")
-    parser.add_argument("--silent", action="store_true", help="Prevent printing JSON to screen.")
-    parser.add_argument("--print", action="store_true", help="Prevent saving JSON to file.")
+def help_text():
+    sys.exit("""
+bsky-dl [url] [path] [options]
 
-    args = parser.parse_args()
-    url = args.url
-    path = args.path if args.path else (config["default_dir"] if config["default_dir"] else Path.cwd())
-    reply_mode = args.replies or config["always_replies"]
-    silent_mode = args.silent or config["always_silent"]
-    print_mode = args.print or config["always_print"]
+Extract JSON from Bluesky posts.
 
-    return url, path, reply_mode, silent_mode, print_mode
+OPTIONS:
+    --json: print the getPostThread JSON to file
+    --replies: include replies and parents in JSON
+    --verbose: print additional logging messages to terminal
+
+The file download path uses the following hierarchy:
+    1. Path specified in command
+    2. default_dir specified in script
+    3. Current working directory
+    """)
+
+def input_validation(filename):
+    if "--help" in sys.argv: help_text()
+    reply_mode = 0 if ("--replies" not in sys.argv and config['always_replies'] != True) else (sys.argv.remove("--replies") or 1)
+    print_mode = 0 if ("--print" not in sys.argv and config['always_print'] != True) else (sys.argv.remove("--print") or 1)
+    url = sys.argv[1] if len(sys.argv) >= 2 else sys.exit("No url entered.")
+    directory = sys.argv[2] if len(sys.argv) >= 3 else (Path.cwd() if config["default_dir"] == '' else config["default_dir"])
+    if directory != "" and not Path(directory).is_dir():
+        if Path(directory).parent.is_dir(): print(f"{directory} is not a valid directory")
+        directory = str(input_path.parent)
+        filename = input_path.stem
+    return url, directory, filename, reply_mode, print_mode
+
+def url2uri(post_url):
+    parts = post_url.rstrip('/').split('/')
+    if len(parts) < 4: raise ValueError(f"Post URL '{post_url}' does not have enough segments.")
+    rkey, handle = parts[-1], parts[-3]
+    return f"at://{resolve_did(handle)}/app.bsky.feed.post/{rkey}", rkey
+
+def resolve_did(handle):
+    if handle.startswith("did:"): return handle
+    response = requests.get(f"https://public.api.bsky.app/xrpc/com.atproto.identity.resolveHandle?handle={handle}")
+    if response.status_code != 200: raise Exception(f"Failed to resolve DID: '{response.text}'")
+    return response.json()['did']
+
+def get_post_thread(post_url, reply_mode):
+    at_uri, rkey = url2uri(post_url)
+    params = {'uri': at_uri, 'depth': 1000 if reply_mode else 0, 'parentHeight': 1000 if reply_mode else 0}
+    response = requests.get('https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread', headers={'Content-Type': 'application/json'}, params=params)
+    if response.status_code != 200: raise Exception(f"Failed to retrieve post thread: '{response.text}'")
+    return response.json(), rkey
 
 def main():
-    url, path, reply_mode, silent_mode, print_mode = input_validation()
-
-    depth = 1000 if reply_mode else 0
-    parent_height = 1000 if reply_mode else 0
-
-    thread = get_post_thread(url, depth, parent_height)
-
-    if not silent_mode:
-        print_json(thread)
-    if print_mode:
-        return
-
-    rkey = url_basename(url)
-    path = validate_path(path, rkey, ['json'])
-    save_json(thread, path)
+    # print(get_post_thread(sys.argv[1]))
+    post_url, directory, filename, reply_mode, print_mode = input_validation("")
+    post_data, rkey = get_post_thread(post_url, reply_mode)
+    filename = f"{directory}/{rkey}" if filename == "" else f"{directory}/{filename}"
+    print(json.dumps(post_data, indent=4))
+    if print_mode: sys.exit()
+    # print(directory)
+    # if directory is not "":
+    json.dump(post_data, open(f'{filename}.json', 'w'), indent=4), print(f"JSON extracted to '{filename}.json'")
 
 if __name__ == "__main__":
+    # handle = "alice-roberts.bsky.social"
+    # response = requests.get(f"https://{handle}/.well-known/did.json")
+    # if response.status_code == 200:
+    #     print(json.dumps(response, indent=4))
+    # else:
+    #     print(f"Failed: {response.text}")
+    # exit()
+    # for alias in response.json().get('alsoKnownAs')
     main()

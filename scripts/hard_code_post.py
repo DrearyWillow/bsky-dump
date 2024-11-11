@@ -81,31 +81,13 @@ def get_post_thread(post_url):
     if response.status_code != 200: raise Exception(f"Failed to retrieve post thread: '{response.text}'")
     return response.json().get('thread')
 
-def create_post(text, session, parent_url, blob_location, alt_text):
+def create_post(text, session, parent_url):
     # service_endpoint = "https://magic.us-west.host.bsky.network"
     did = session.get('did')
     service_endpoint = get_service_endpoint(did)
     url = f"{service_endpoint}/xrpc/com.atproto.repo.createRecord"
 
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-    # print(now)
-    # exit()
-
-    # now = datetime.now(timezone.utc) + timedelta(weeks=1)
-    # now = now.isoformat().replace("+00:00", "Z")
-
-    # now = datetime(1752, 9, 3, 8, 0, 0) # tzinfo=timezone.utc
-    # now = now.isoformat().replace("+00:00", "Z")
-    # print(now)
-    # exit()
-
-    #okay so it turns out tzinfo adds +00:00, if we call without, we need to add the Z ourselves
-    # now = datetime(2023, 2, 29, 8, 0, 0)#, tzinfo=timezone.utc) # tzinfo=timezone.utc
-    # now = now.isoformat().replace("+00:00", "") + "Z"
-    # print(now)
-    # exit()
-
-    # now = "2023-02-29T18:00:00Z"
 
     post = {
         "$type": "app.bsky.feed.post",
@@ -126,31 +108,76 @@ def create_post(text, session, parent_url, blob_location, alt_text):
             }
         }
 
-    if blob_location != "":
-        blob, blob_type = get_blob(session, blob_location)
-        if blob_type not in ["image", "video"]:
-            raise Exception(f"Unknown blob type '{blob_type}'")
-        elif blob_type == "video":
-            #https://docs.bsky.app/docs/api/app-bsky-video-upload-video
-            #https://docs.bsky.app/docs/api/app-bsky-video-get-job-status
-            #https://docs.bsky.app/docs/api/app-bsky-video-get-upload-limits
-            # post['embed'] = {
-            #     "$type": "app.bsky.embed.video",
-            #     "video": [{
-            #         "alt": alt_text,
-            #         "video": blob,
-            #     }],
-            # }
-            raise Exception("Video not supported yet.")
-        elif blob_type == "image":
-            post['embed'] = {
-                "$type": "app.bsky.embed.images",
-                "images": [{
-                    "alt": alt_text,
-                    "image": blob,
-                }],
+    post['record'] = {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-10-27T21:00:56.019Z",
+        "embed": {
+            "$type": "app.bsky.embed.recordWithMedia",
+            "media": {
+                "$type": "app.bsky.embed.external",
+                "external": {
+                    "description": "ALT: a man and a woman are kissing with the words boop written below them",
+                    "thumb": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreidocwpuueog3pp2l3hjiyxs4xwde7ujqsxspj2isuuqxs5xob2dia"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 260115
+                    },
+                    "title": "a man and a woman are kissing with the words boop written below them",
+                    "uri": "https://media.tenor.com/FJwwEsKRw24AAAAC/anime-hello.gif?hh=279&ww=498"
+                }
+            },
+            "record": {
+                "$type": "app.bsky.embed.record",
+                "record": {
+                    "cid": "bafyreiezrd7oh2r7ooxg5rurfzmtv5kwodhxgaqprv4jmntykvfjlfgeve",
+                    "uri": "at://did:plc:ougvqylnj6uth7c6juj3kly6/app.bsky.feed.post/3l7inxzffkq2c"
+                }
             }
+        },
+        "langs": [
+            "en"
+        ],
+        "text": "gif"
+    },
+
+    # if blob_location != "":
+    #     blob, blob_type = get_blob(session, blob_location)
+    #     if blob_type not in ["image", "video"]:
+    #         raise Exception(f"Unknown blob type '{blob_type}'")
+    #     elif blob_type == "video":
+    #         #https://docs.bsky.app/docs/api/app-bsky-video-upload-video
+    #         #https://docs.bsky.app/docs/api/app-bsky-video-get-job-status
+    #         #https://docs.bsky.app/docs/api/app-bsky-video-get-upload-limits
+    #         # post['embed'] = {
+    #         #     "$type": "app.bsky.embed.video",
+    #         #     "video": [{
+    #         #         "alt": alt_text,
+    #         #         "video": blob,
+    #         #     }],
+    #         # }
+    #         raise Exception("Video not supported yet.")
+    #     elif blob_type == "image":
+    #         post['embed'] = {
+    #             "$type": "app.bsky.embed.images",
+    #             "images": [{
+    #                 "alt": alt_text,
+    #                 "image": blob,
+    #             }],
+    #         }
         
+
+    post['embed'] = {
+            "$type": "app.bsky.embed.external#view",
+            "external": {
+                "uri": "https://on.soundcloud.com/GRBKodtDk8aH9z89A",
+                "title": "icon",
+                "description": "charli xcx - 360",
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ougvqylnj6uth7c6juj3kly6/bafkreif77svqanczljaxodqwnnaeofa35e3qdgcehfroweyiaqk2fsmidu@jpeg"
+            }
+        }
 
     payload = json.dumps({
     "repo": did,
@@ -178,13 +205,13 @@ def main():
     arg_len = len(sys.argv)
     text = input("Enter post text: ") if arg_len <= 1 else sys.argv[1]
     parent_url = input("Enter a parent url: ") if arg_len <= 2 else sys.argv[2]
-    img_location = input("Enter an png location: ") if arg_len <= 3 or sys.argv[3] == "" else sys.argv[3]
-    if img_location != "":
-        alt_text = input("Enter image alt text: ") if arg_len <= 4 else sys.argv[4]
-    else:
-        alt_text = ""
+    # img_location = input("Enter an png location: ") if arg_len <= 3 or sys.argv[3] == "" else sys.argv[3]
+    # if img_location != "":
+    #     alt_text = input("Enter image alt text: ") if arg_len <= 4 else sys.argv[4]
+    # else:
+    #     alt_text = ""
 
-    create_post(text, get_session(), parent_url, img_location, alt_text)
+    create_post(text, get_session(), parent_url)
 
 if __name__ == "__main__":
     main()

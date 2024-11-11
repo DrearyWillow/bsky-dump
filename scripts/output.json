@@ -1,0 +1,419 @@
+{
+    "thread": {
+        "$type": "app.bsky.feed.defs#threadViewPost",
+        "post": {
+            "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rojsrn632v",
+            "cid": "bafyreibocyvds5zeevovwvvfvee6zoujxwogxbs5e5mxlfh24bti7chlmu",
+            "author": {
+                "did": "did:plc:tj7g244gl5v6ai6cm4f4wlqp",
+                "handle": "souris.moe",
+                "displayName": "maeve",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tj7g244gl5v6ai6cm4f4wlqp/bafkreia6u7jyzf7avxlubwo2jixa5hfk6kffsqn5jmggkf4vmj5io6pewa@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "all"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-03T01:07:57.445Z"
+            },
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2024-09-22T22:52:13.634Z",
+                "langs": [
+                    "en"
+                ],
+                "reply": {
+                    "parent": {
+                        "cid": "bafyreifu4r2r2kw22nndcu4rs2rw6dhxsfhu4tncvu3qayon36p2bot2mu",
+                        "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4roht5vnf27"
+                    },
+                    "root": {
+                        "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                        "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                    }
+                },
+                "text": "dry wall lookin ass \ud83e\udd23\ud83e\udd2d"
+            },
+            "replyCount": 1,
+            "repostCount": 0,
+            "likeCount": 3,
+            "quoteCount": 0,
+            "indexedAt": "2024-09-22T22:52:13.634Z",
+            "labels": []
+        },
+        "replies": [
+            {
+                "$type": "app.bsky.feed.defs#threadViewPost",
+                "post": {
+                    "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rosftgdk2b",
+                    "cid": "bafyreiafld22jv2tagokxoywdhwa36vcjzqw4gy23vs4hqn2f7bcraugee",
+                    "author": {
+                        "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                        "handle": "dreary.bsky.social",
+                        "displayName": "willow",
+                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                        "associated": {
+                            "chat": {
+                                "allowIncoming": "all"
+                            }
+                        },
+                        "labels": [],
+                        "createdAt": "2023-09-19T00:24:57.730Z"
+                    },
+                    "record": {
+                        "$type": "app.bsky.feed.post",
+                        "createdAt": "2024-09-22T22:57:02.083Z",
+                        "embed": {
+                            "$type": "app.bsky.embed.images",
+                            "images": [
+                                {
+                                    "alt": "",
+                                    "aspectRatio": {
+                                        "height": 223,
+                                        "width": 540
+                                    },
+                                    "image": {
+                                        "$type": "blob",
+                                        "ref": {
+                                            "$link": "bafkreicdn6mikbsdsm4iw4snxrs4y64upjleow7ww5oyuvnto5n5xiif7u"
+                                        },
+                                        "mimeType": "image/jpeg",
+                                        "size": 82980
+                                    }
+                                }
+                            ]
+                        },
+                        "langs": [
+                            "en"
+                        ],
+                        "reply": {
+                            "parent": {
+                                "cid": "bafyreibocyvds5zeevovwvvfvee6zoujxwogxbs5e5mxlfh24bti7chlmu",
+                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rojsrn632v"
+                            },
+                            "root": {
+                                "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                            }
+                        },
+                        "text": ""
+                    },
+                    "embed": {
+                        "$type": "app.bsky.embed.images#view",
+                        "images": [
+                            {
+                                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreicdn6mikbsdsm4iw4snxrs4y64upjleow7ww5oyuvnto5n5xiif7u@jpeg",
+                                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreicdn6mikbsdsm4iw4snxrs4y64upjleow7ww5oyuvnto5n5xiif7u@jpeg",
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 223,
+                                    "width": 540
+                                }
+                            }
+                        ]
+                    },
+                    "replyCount": 1,
+                    "repostCount": 0,
+                    "likeCount": 3,
+                    "quoteCount": 0,
+                    "indexedAt": "2024-09-22T22:57:02.083Z",
+                    "labels": []
+                },
+                "replies": [
+                    {
+                        "$type": "app.bsky.feed.defs#threadViewPost",
+                        "post": {
+                            "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rp2quemz2b",
+                            "cid": "bafyreibkxog5rfi6jimepi3aafkffrnwfqi4inwjdkgbdwda23wzqwyeiy",
+                            "author": {
+                                "did": "did:plc:tj7g244gl5v6ai6cm4f4wlqp",
+                                "handle": "souris.moe",
+                                "displayName": "maeve",
+                                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tj7g244gl5v6ai6cm4f4wlqp/bafkreia6u7jyzf7avxlubwo2jixa5hfk6kffsqn5jmggkf4vmj5io6pewa@jpeg",
+                                "associated": {
+                                    "chat": {
+                                        "allowIncoming": "all"
+                                    }
+                                },
+                                "labels": [],
+                                "createdAt": "2023-09-03T01:07:57.445Z"
+                            },
+                            "record": {
+                                "$type": "app.bsky.feed.post",
+                                "createdAt": "2024-09-22T23:01:42.061Z",
+                                "langs": [
+                                    "en"
+                                ],
+                                "reply": {
+                                    "parent": {
+                                        "cid": "bafyreiafld22jv2tagokxoywdhwa36vcjzqw4gy23vs4hqn2f7bcraugee",
+                                        "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rosftgdk2b"
+                                    },
+                                    "root": {
+                                        "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                        "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                                    }
+                                },
+                                "text": "superLikeCount=NaN x3"
+                            },
+                            "replyCount": 1,
+                            "repostCount": 0,
+                            "likeCount": 2,
+                            "quoteCount": 0,
+                            "indexedAt": "2024-09-22T23:01:42.061Z",
+                            "labels": []
+                        },
+                        "replies": [
+                            {
+                                "$type": "app.bsky.feed.defs#threadViewPost",
+                                "post": {
+                                    "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rp3smlx42r",
+                                    "cid": "bafyreiceh45cgmpek42rv5g43bdeefneipwkegvcgoeicirozc3axzcqwu",
+                                    "author": {
+                                        "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                                        "handle": "dreary.bsky.social",
+                                        "displayName": "willow",
+                                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                                        "associated": {
+                                            "chat": {
+                                                "allowIncoming": "all"
+                                            }
+                                        },
+                                        "labels": [],
+                                        "createdAt": "2023-09-19T00:24:57.730Z"
+                                    },
+                                    "record": {
+                                        "$type": "app.bsky.feed.post",
+                                        "createdAt": "2024-09-22T23:02:17.475Z",
+                                        "langs": [
+                                            "en"
+                                        ],
+                                        "reply": {
+                                            "parent": {
+                                                "cid": "bafyreibkxog5rfi6jimepi3aafkffrnwfqi4inwjdkgbdwda23wzqwyeiy",
+                                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rp2quemz2b"
+                                            },
+                                            "root": {
+                                                "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                                            }
+                                        },
+                                        "text": "btw thanks for doing this, made me realize i completely forgot about parentHeight"
+                                    },
+                                    "replyCount": 1,
+                                    "repostCount": 0,
+                                    "likeCount": 2,
+                                    "quoteCount": 0,
+                                    "indexedAt": "2024-09-22T23:02:17.475Z",
+                                    "labels": []
+                                },
+                                "replies": [
+                                    {
+                                        "$type": "app.bsky.feed.defs#threadViewPost",
+                                        "post": {
+                                            "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rpaj3jzs2x",
+                                            "cid": "bafyreiaasotp7s6opg3pgty7z5m6nzqwfhj2z4zvnquhypweylqboni36e",
+                                            "author": {
+                                                "did": "did:plc:tj7g244gl5v6ai6cm4f4wlqp",
+                                                "handle": "souris.moe",
+                                                "displayName": "maeve",
+                                                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tj7g244gl5v6ai6cm4f4wlqp/bafkreia6u7jyzf7avxlubwo2jixa5hfk6kffsqn5jmggkf4vmj5io6pewa@jpeg",
+                                                "associated": {
+                                                    "chat": {
+                                                        "allowIncoming": "all"
+                                                    }
+                                                },
+                                                "labels": [],
+                                                "createdAt": "2023-09-03T01:07:57.445Z"
+                                            },
+                                            "record": {
+                                                "$type": "app.bsky.feed.post",
+                                                "createdAt": "2024-09-22T23:04:55.232Z",
+                                                "langs": [
+                                                    "en"
+                                                ],
+                                                "reply": {
+                                                    "parent": {
+                                                        "cid": "bafyreiceh45cgmpek42rv5g43bdeefneipwkegvcgoeicirozc3axzcqwu",
+                                                        "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rp3smlx42r"
+                                                    },
+                                                    "root": {
+                                                        "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                                        "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                                                    }
+                                                },
+                                                "text": "/genq wait is that real or a dig?"
+                                            },
+                                            "replyCount": 1,
+                                            "repostCount": 0,
+                                            "likeCount": 2,
+                                            "quoteCount": 0,
+                                            "indexedAt": "2024-09-22T23:04:55.232Z",
+                                            "labels": []
+                                        },
+                                        "replies": [
+                                            {
+                                                "$type": "app.bsky.feed.defs#threadViewPost",
+                                                "post": {
+                                                    "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rpe7vt3e24",
+                                                    "cid": "bafyreiexwziuyqbms3s66v67aur2hgklpfsa23h53ggzuqvm2n7lendcb4",
+                                                    "author": {
+                                                        "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                                                        "handle": "dreary.bsky.social",
+                                                        "displayName": "willow",
+                                                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                                                        "associated": {
+                                                            "chat": {
+                                                                "allowIncoming": "all"
+                                                            }
+                                                        },
+                                                        "labels": [],
+                                                        "createdAt": "2023-09-19T00:24:57.730Z"
+                                                    },
+                                                    "record": {
+                                                        "$type": "app.bsky.feed.post",
+                                                        "createdAt": "2024-09-22T23:06:59.843Z",
+                                                        "embed": {
+                                                            "$type": "app.bsky.embed.external",
+                                                            "external": {
+                                                                "description": "Get posts in a thread. Does not require auth, but additional metadata and filtering will be applied for authed requests.",
+                                                                "thumb": {
+                                                                    "$type": "blob",
+                                                                    "ref": {
+                                                                        "$link": "bafkreigsishj6mqkjupzlwfyob2ojhlma7glnpmw3mtxbz57taeoaszeoq"
+                                                                    },
+                                                                    "mimeType": "image/jpeg",
+                                                                    "size": 138288
+                                                                },
+                                                                "title": "app.bsky.feed.getPostThread | Bluesky",
+                                                                "uri": "https://docs.bsky.app/docs/api/app-bsky-feed-get-post-thread"
+                                                            }
+                                                        },
+                                                        "langs": [
+                                                            "en"
+                                                        ],
+                                                        "reply": {
+                                                            "parent": {
+                                                                "cid": "bafyreiaasotp7s6opg3pgty7z5m6nzqwfhj2z4zvnquhypweylqboni36e",
+                                                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rpaj3jzs2x"
+                                                            },
+                                                            "root": {
+                                                                "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                                                "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                                                            }
+                                                        },
+                                                        "text": "getPostThread has a query parameters for depth and parentHeight for how many replies to include in the response. i accounted for depth (# replies) but forgot parentHeight (# parents). when i checked your post to do the meme, it made me realize"
+                                                    },
+                                                    "embed": {
+                                                        "$type": "app.bsky.embed.external#view",
+                                                        "external": {
+                                                            "uri": "https://docs.bsky.app/docs/api/app-bsky-feed-get-post-thread",
+                                                            "title": "app.bsky.feed.getPostThread | Bluesky",
+                                                            "description": "Get posts in a thread. Does not require auth, but additional metadata and filtering will be applied for authed requests.",
+                                                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreigsishj6mqkjupzlwfyob2ojhlma7glnpmw3mtxbz57taeoaszeoq@jpeg"
+                                                        }
+                                                    },
+                                                    "replyCount": 1,
+                                                    "repostCount": 0,
+                                                    "likeCount": 2,
+                                                    "quoteCount": 0,
+                                                    "indexedAt": "2024-09-22T23:06:59.843Z",
+                                                    "labels": []
+                                                },
+                                                "replies": [
+                                                    {
+                                                        "$type": "app.bsky.feed.defs#threadViewPost",
+                                                        "post": {
+                                                            "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rphma5432v",
+                                                            "cid": "bafyreieacwlxzchmylrnn5wqoeyawyasuk7dtmd3j5rltacw3thygkbu4a",
+                                                            "author": {
+                                                                "did": "did:plc:tj7g244gl5v6ai6cm4f4wlqp",
+                                                                "handle": "souris.moe",
+                                                                "displayName": "maeve",
+                                                                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tj7g244gl5v6ai6cm4f4wlqp/bafkreia6u7jyzf7avxlubwo2jixa5hfk6kffsqn5jmggkf4vmj5io6pewa@jpeg",
+                                                                "associated": {
+                                                                    "chat": {
+                                                                        "allowIncoming": "all"
+                                                                    }
+                                                                },
+                                                                "labels": [],
+                                                                "createdAt": "2023-09-03T01:07:57.445Z"
+                                                            },
+                                                            "record": {
+                                                                "$type": "app.bsky.feed.post",
+                                                                "createdAt": "2024-09-22T23:08:53.414Z",
+                                                                "embed": {
+                                                                    "$type": "app.bsky.embed.external",
+                                                                    "external": {
+                                                                        "description": "ALT: a girl covering her mouth with her hands while looking out of a window",
+                                                                        "thumb": {
+                                                                            "$type": "blob",
+                                                                            "ref": {
+                                                                                "$link": "bafkreid5zzrw53f6u4qybd5ci3tplmeartlcatho65e7cfhhqjdv6nkaue"
+                                                                            },
+                                                                            "mimeType": "image/jpeg",
+                                                                            "size": 433477
+                                                                        },
+                                                                        "title": "a girl covering her mouth with her hands while looking out of a window",
+                                                                        "uri": "https://media.tenor.com/lAVbMB_6BOIAAAAC/rinko-yamato-my-love-story.gif?hh=498&ww=498"
+                                                                    }
+                                                                },
+                                                                "langs": [
+                                                                    "en"
+                                                                ],
+                                                                "reply": {
+                                                                    "parent": {
+                                                                        "cid": "bafyreiexwziuyqbms3s66v67aur2hgklpfsa23h53ggzuqvm2n7lendcb4",
+                                                                        "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rpe7vt3e24"
+                                                                    },
+                                                                    "root": {
+                                                                        "cid": "bafyreicu3jypa6egfkiqb7r4lbtgcjuxrxydpasb6tizekqbhywmd3fdvq",
+                                                                        "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+                                                                    }
+                                                                },
+                                                                "text": "oh wowie"
+                                                            },
+                                                            "embed": {
+                                                                "$type": "app.bsky.embed.external#view",
+                                                                "external": {
+                                                                    "uri": "https://media.tenor.com/lAVbMB_6BOIAAAAC/rinko-yamato-my-love-story.gif?hh=498&ww=498",
+                                                                    "title": "a girl covering her mouth with her hands while looking out of a window",
+                                                                    "description": "ALT: a girl covering her mouth with her hands while looking out of a window",
+                                                                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tj7g244gl5v6ai6cm4f4wlqp/bafkreid5zzrw53f6u4qybd5ci3tplmeartlcatho65e7cfhhqjdv6nkaue@jpeg"
+                                                                }
+                                                            },
+                                                            "replyCount": 0,
+                                                            "repostCount": 0,
+                                                            "likeCount": 1,
+                                                            "quoteCount": 0,
+                                                            "indexedAt": "2024-09-22T23:08:53.414Z",
+                                                            "labels": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "threadgate": {
+        "uri": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.threadgate/3l4rjczxxfn2v",
+        "cid": "bafyreibhyf4iuhwyg7amdbqa7y6ajnukzjsxofgcusate5iyrkbsijn2xi",
+        "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "createdAt": "2024-09-22T22:37:14.374Z",
+            "hiddenReplies": [
+                "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.feed.post/3l4rnlzoas72b"
+            ],
+            "post": "at://did:plc:tj7g244gl5v6ai6cm4f4wlqp/app.bsky.feed.post/3l4rjczxxfn2v"
+        },
+        "lists": []
+    }
+}
