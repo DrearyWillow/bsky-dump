@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+from bsky_utils import create_post_prompt
+import sys
+import argparse
+
+def validate_inputs():
+    config = {
+        'username': None,
+        'password': None,
+        'text_prompt': True,
+        'blob_prompt': False,
+        'alt_text': False,
+    }
+
+    parser = argparse.ArgumentParser(description="Create a bluesky post")
+    parser.add_argument("--auth", nargs=2, metavar=("USERNAME", "PASSWORD"),
+                        help="Username and password for authentication.")
+    parser.add_argument("--parent", metavar="PARENT_URL",
+                        help="Parent URL if creating a reply.")
+    args = parser.parse_args()
+    username, password = args.auth if args.auth else (config['username'], config['password'])
+    parent_url = args.parent if args.parent else None
+
+    # set these inputs to 0 if we don't want to be prompted
+    text = None if config['text_prompt'] else 0
+    blob_path = None if config['blob_prompt'] else 0
+    alt_text = None if config['blob_prompt'] else 0
+
+    return username, password, text, parent_url, blob_path, alt_text
+
+def main():
+    create_post_prompt(*validate_inputs())
+
+if __name__ == "__main__":
+    main()
