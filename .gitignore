@@ -1,2 +1,4 @@
 /json/
-/bsky_utils_symlink.py
+/copy-utils-before-commit.py
+/secret.py
+/__pycache__/
