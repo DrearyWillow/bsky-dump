@@ -168,6 +168,9 @@ def validate_path(path, fallback_filename, allowed_ext):
 
     return f"{directory}/{stem}.{suffix}"
 
+def linkify(text, link=None, file=False):
+    return f"\033]8;;{'file://' if file else ''}{link if link else text}\033\\{text}\033]8;;\033\\"
+
 # AUTH
 def get_session(username, password, service_endpoint):
     """Create a session token
@@ -260,11 +263,15 @@ def resolve_handle(handle, fatal=False):
     """
     if handle.startswith("did:"):
         return handle
+    if handle.startswith("@"):
+        handle = handle[1:]
+    if not handle:
+        return None
     return (safe_request('get',
         f'https://public.api.bsky.app/xrpc/com.atproto.identity.resolveHandle?handle={handle}',
         fatal=fatal) or {}).get('did')
 
-def retrieve_did_doc(did, fatal=False, third_party=False, fallback=False):
+def get_did_doc(did, fatal=False, third_party=False, fallback=False):
     if not did.startswith('did:'):
         did = retrieve_did(did)
     def retrieve(third_party):
@@ -281,8 +288,8 @@ def retrieve_did_doc(did, fatal=False, third_party=False, fallback=False):
         return response
     return safe_request('get', url, fatal=fatal)
 
-def retrieve_service_endpoint(did, fatal=False, third_party=False, fallback=False):
-    for service in (retrieve_did_doc(did, fatal=fatal, third_party=third_party, fallback=fallback).get('service') or []):
+def get_service_endpoint(did, fatal=False, third_party=False, fallback=False):
+    for service in (get_did_doc(did, fatal=fatal, third_party=third_party, fallback=fallback).get('service') or []):
         if service.get('type') == 'AtprotoPersonalDataServer':
             return service.get('serviceEndpoint')
     if fatal:
@@ -290,6 +297,10 @@ def retrieve_service_endpoint(did, fatal=False, third_party=False, fallback=Fals
     return 'https://bsky.social'
 
 # RECORD RETRIEVAL
+
+# TODO: generic_loop_until_match
+# TODO: a way to invoke loop_until_match, yeild_loop, or return_loop for any api - maybe pass function as parameter?
+
 def generic_page_loop(api, params, path_to_output, path_to_cursor):
     res = safe_request('get', api, params=params)
     output = traverse(res, path_to_output)
@@ -318,6 +329,16 @@ def get_profile(did, session=None):
     params = {'actor': did}
     headers = {"Authorization": "Bearer " + session["accessJwt"]} if session else None
     return safe_request('get', api, headers=headers, params=params)
+
+def list_records(did, service, nsid, ):
+    api = f'{service}/xrpc/com.atproto.repo.listRecords'
+    params = {
+        'repo': did,
+        'collection': nsid,
+        'limit': 100,
+    }
+    headers = {"Authorization": "Bearer " + session["accessJwt"]} if session else None
+    return generic_page_loop(api, params, ['records'], ['cursor'])
 
 def get_post_thread(url, depth=0, parent_height=0, fatal=False):
     """Retrieve a post thread.
@@ -532,7 +553,7 @@ def create_post(session, service_endpoint, text="", parent_url=None, blob_path=N
 def create_post_prompt(username=None, password=None, text=None, parent_url=None, blob_path=None, alt_text=None):
     if not username: username = input("Enter username: ")
     if not password: password = input("Enter password: ")
-    service_endpoint = retrieve_service_endpoint(resolve_handle(username))
+    service_endpoint = get_service_endpoint(resolve_handle(username))
     session = get_session(username, password, service_endpoint)
     if text is None: text = input("Enter post text: ")
     if parent_url is None: parent_url = input("Enter a parent url: ")
@@ -593,7 +614,7 @@ def replace_post_prompt(username=None, password=None, url=None, text=None):
     if not username: username = input("Enter username: ")
     if not password: password = input("Enter password: ")
     session = get_session(username, password)
-    service_endpoint = retrieve_service_endpoint(session.get('did'))
+    service_endpoint = get_service_endpoint(session.get('did'))
     if url is None: url = input("Enter a post url: ")
     if text is None: text = input("Enter post text: ")
 
@@ -788,7 +809,7 @@ def add_follows_to_list(session, timestamp=True):
     selected_list = cli_list_menu(handle)
 
     did = session['did']
-    service_endpoint = retrieve_service_endpoint(did)
+    service_endpoint = get_service_endpoint(did)
 
     for follower in get_follows(did):
         add_user_to_list(session, service_endpoint, selected_list, follower['value']['subject'])
