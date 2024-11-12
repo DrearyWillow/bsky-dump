@@ -2,13 +2,13 @@ from bsky_utils import *
 import re
 import sys
 
-
 def list_records(did, service, nsid, limit, cursor):
     params = {
         "repo": did,
         "collection": nsid,
         "limit": limit,
         "cursor": cursor,
+        "reverse": "true",
     }
     api = f"{service}/xrpc/com.atproto.repo.listRecords"
     return safe_request("get", api, params=params)
@@ -35,7 +35,7 @@ def ww_title2uri(did, service, title):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        sys.exit("Enter a White Wind URL")
+        sys.exit("Enter a WhiteWind URL")
     url = sys.argv[1]
     whtwind_pattern = r"^https:\/\/whtwnd\.com\/(?P<handle>[\w.:%-]+)\/(?:entries\/(?P<title>[\w.:%-]+)(?:\?rkey=(?P<rkey>[\w.:%-]+))?|(?P<postId>[\w.:%-]+))$"
     match = re.match(whtwind_pattern, url)
