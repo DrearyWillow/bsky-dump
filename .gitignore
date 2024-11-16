@@ -1,4 +1,3 @@
 /json/
-/copy-utils-before-commit.py
-/secret.py
+/.env
 /__pycache__/
