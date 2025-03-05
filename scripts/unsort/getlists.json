@@ -1,0 +1,227 @@
+{
+    "lists": [
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3lfi3ivol7s2r",
+            "cid": "bafyreib67xyrexsgrsy2ec35jfpa7vctps3rhpgslu6ban63tuce6mmubu",
+            "name": "meow3",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreih7tdyyghrbcfry2ihd7gczphpztidhentu5huur7a6za52b4r7mu@jpeg",
+            "listItemCount": 77,
+            "indexedAt": "2025-01-11T16:05:19.551Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3lefrug4zed2l",
+            "cid": "bafyreicfj2gmsknca6anynlbwbkrd7i7bpza45sfzij7xkey6pksiqmbaa",
+            "name": "chat2",
+            "purpose": "app.bsky.graph.defs#modlist",
+            "listItemCount": 48,
+            "indexedAt": "2024-12-29T15:45:36.458Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": "break glass in case of emergency"
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3ldc5ohwfsu2n",
+            "cid": "bafyreihibycztwabjhvvvxznsfv5gkwfhmunkt2lcn7dhnsar2ovzh5c24",
+            "name": "chat",
+            "purpose": "app.bsky.graph.defs#modlist",
+            "listItemCount": 444,
+            "indexedAt": "2024-12-27T04:30:38.246Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": "i'm just soft deactivating for a bit"
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3lbqiiph3kf23",
+            "cid": "bafyreihbtivwdvtiqfzgikxbny4wrjhe44c2ozkurlpkjux7g4axaqpwai",
+            "name": "politic",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreicqyliaswzgabkad75g33oheqcxhg3fvdrthb6vpbmgdpgkwtehma@jpeg",
+            "listItemCount": 33,
+            "indexedAt": "2024-11-25T16:16:17.661Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3lbcg37fxix2y",
+            "cid": "bafyreic355vr4d3htmmv7ccbclrh3quoqlrndb7ufcnudfxhjmi2qrubye",
+            "name": "tech",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreidkcm2y6d5uuoieysf3etzxs2mni4u6yw64iq67qjt33qoewsmr3u@jpeg",
+            "listItemCount": 38,
+            "indexedAt": "2024-11-25T15:56:33.260Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3l7smvoqdi62r",
+            "cid": "bafyreidxibxavvmr63tepcmdqy6y7o3ctjed2xloqc35tc5l5oj3fkqaci",
+            "name": "meow4",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreibaas3g5k3liopdecdv7e74tbkzia6a6t2gkpfwq3xqe6lggam3em@jpeg",
+            "listItemCount": 169,
+            "indexedAt": "2025-01-11T15:49:07.970Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3kwpjne65r223",
+            "cid": "bafyreif3wiqqrppgzpv2a263jopnthrjjly5xxhq5yrirbafxk3l4frmbm",
+            "name": "meow2",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreidmldyu3osl324znld5u7s5zrjqzugcljp4qxhflpbaqjoy53vwmu@jpeg",
+            "listItemCount": 63,
+            "indexedAt": "2024-07-07T17:48:14.183Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3ksbhekrfpk2n",
+            "cid": "bafyreif6y6rubowehthsc2l4jo3zg5efm5b5dunbjatmb4nqfact6knyju",
+            "name": "meow",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreicp72ytgfisqweegf5vsvnwnb7je2ophls3vla5r6f3bew5elvugq@jpeg",
+            "listItemCount": 21,
+            "indexedAt": "2024-05-12T05:49:29.068Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        },
+        {
+            "uri": "at://did:plc:hx53snho72xoj7zqt5uice4u/app.bsky.graph.list/3kivqnnhzcr27",
+            "cid": "bafyreigahch6ycv2c6273ihkdy6ak44divb2ojnbm7x2724mufrzufffqu",
+            "name": "kasey",
+            "purpose": "app.bsky.graph.defs#curatelist",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreidcgjpr6lf2jc3lhzl2o34ab2oba55psarusc4z36wfm67nclketq@jpeg",
+            "listItemCount": 30,
+            "indexedAt": "2024-11-22T01:20:29.780Z",
+            "labels": [],
+            "creator": {
+                "did": "did:plc:hx53snho72xoj7zqt5uice4u",
+                "handle": "dreary.dev",
+                "displayName": "willow",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hx53snho72xoj7zqt5uice4u/bafkreiblp6bxadz42kevdcqcq3qofzxnoej5nhmwdqwcgjdg26ir2offdi@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    }
+                },
+                "labels": [],
+                "createdAt": "2023-09-19T00:24:57.730Z",
+                "indexedAt": "2025-02-22T09:19:13.245Z"
+            },
+            "description": ""
+        }
+    ]
+}

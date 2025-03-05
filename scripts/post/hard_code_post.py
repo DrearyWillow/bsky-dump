@@ -110,7 +110,7 @@ def create_post(text, session, parent_url):
 
     post['record'] = {
         "$type": "app.bsky.feed.post",
-        "createdAt": "2024-10-27T21:00:56.019Z",
+        "createdAt": "2024-11-23T14:34:23.572Z",
         "embed": {
             "$type": "app.bsky.embed.recordWithMedia",
             "media": {
