@@ -1,0 +1,12 @@
+from bsky_utils import *
+
+handle = ""
+did = resolve_handle(handle)
+pw = ""
+service = get_service_endpoint(did)
+session = get_session(handle, pw, service)
+
+blob_path = '/home/kyler/Downloads/dog.jpg'
+alt_text = "waow look at me i'm such a baaad girl meow\n\nlyrics:\n\ni went out when i fell asleep last night\nyeah i had a feelin i wasnt goin down alright\ni thought i gave it up, started feelin bad for myself\ni looked in the mirror, i saw someone else\no yea\n\ni woke up in a bad dream\nim just another bad thing\ni woke up with my eyes closed\nshe dont love me i know\nx2\n\n(change my mind in the morning\nbreak my heart by the time the night ends\nsaid its alright, then?\ni've been waiting for way too long\ntrying not to\nbreak my own heart\nbreak my own heart)\n\n...\n\n[ im just flesh and blood\nwith feelings in between\nin a bad dream\ntime stands still next to me\ni cant see through\nmy eyes are closed\n, i know ]\n\nlyrics:\n\ni went out when i fell asleep last night\nyeah i had a feelin i wasnt goin down alright\ni thought i gave it up, started feelin bad for myself\ni looked in the mirror, i saw someone else\no yea\n\ni woke up in a bad dream\nim just another bad thing\ni woke up with my eyes closed\nshe dont love me i know\nx2\n\n(change my mind in the morning\nbreak my heart by the time the night ends\nsaid its alright, then?\ni've been waiting for way too long\ntrying not to\nbreak my own heart\nbreak my own heart)\n\n...\n\n[ im just flesh and blood\nwith feelings in between\nin a bad dream\ntime stands still next to me\ni cant see through\nmy eyes are closed\n, i know ]\n\nlyrics:\n\ni went out when i fell asleep last night\nyeah i had a feelin i wasnt goin down alright\ni thought i gave it up, started feelin bad for myself\ni looked in the mirror, i saw someone else\no yea\n\ni woke up in a bad dream\nim just another bad thing\ni woke up with my eyes closed\nshe dont love me i know\nx2\n\n(change my mind in the morning\nbreak my heart by the time the night ends\nsaid its alright, then?\ni've been waiting for way too long\ntrying not to\nbreak my own heart\nbreak my own heart)\n\n...\n\n[ im just flesh and blood\nwith feelings in between\nin a bad dream\ntime stands still next to me\ni cant see through\nmy eyes are closed\n, i know ]\n\nhi david i'm sinning too isn't that coool"
+
+create_post(session, service, text="invisible alt text", blob_path=blob_path, alt_text=alt_text)
