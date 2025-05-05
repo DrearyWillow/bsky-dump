@@ -11,8 +11,9 @@ blob_path = '/home/kyler/Downloads/outie.juli.ee.zip'
 blob = upload_blob(session, service, blob_path)
 
 record = {
+    '$type': 'dev.dreary.archive',
     'createdAt': generate_timestamp(),
     'blob': blob
 }
 
-create_record(session, service, 'dev.dreary.archive', record)
+create_record(session, service, record)

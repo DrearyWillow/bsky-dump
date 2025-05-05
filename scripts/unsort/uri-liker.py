@@ -29,6 +29,6 @@ if __name__ == "__main__":
     uri = input("AT-URI: ")
     record = construct_like_record(uri)
 
-    create_record(session, service, "app.bsky.feed.like", record)
+    create_record(session, service, record)
     
 
